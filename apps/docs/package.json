@@ -11,6 +11,7 @@
     "check-types": "tsc --noEmit",
     "test": "jest",
     "test:watch": "jest --watch",
+    "test:e2e": "cd test/e2e && pnpm dlx playwright test",
     "biome:check": "biome check .",
     "biome:fix": "biome check --fix ."
   },
@@ -22,12 +23,13 @@
   },
   "devDependencies": {
     "@biomejs/biome": "catalog:",
+    "@playwright/test": "catalog:",
     "@testing-library/jest-dom": "catalog:",
     "@testing-library/react": "catalog:",
     "@testing-library/user-event": "catalog:",
     "@tooling/biome-config": "workspace:*",
-    "@tooling/next-config": "workspace:*",
     "@tooling/jest-config": "workspace:*",
+    "@tooling/next-config": "workspace:*",
     "@tooling/tailwind-config": "workspace:*",
     "@tooling/typescript-config": "workspace:*",
     "@types/jest": "catalog:",

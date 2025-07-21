@@ -120,6 +120,9 @@ importers:
       '@biomejs/biome':
         specifier: 'catalog:'
         version: 2.1.2
+      '@playwright/test':
+        specifier: 'catalog:'
+        version: 1.54.1
       '@testing-library/jest-dom':
         specifier: 'catalog:'
         version: 6.6.3
@@ -181,6 +184,9 @@ importers:
       '@biomejs/biome':
         specifier: 'catalog:'
         version: 2.1.2
+      '@playwright/test':
+        specifier: 'catalog:'
+        version: 1.54.1
       '@testing-library/jest-dom':
         specifier: 'catalog:'
         version: 6.6.3
