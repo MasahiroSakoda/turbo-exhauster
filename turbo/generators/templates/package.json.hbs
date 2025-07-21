@@ -1,0 +1,25 @@
+{
+  "name": "@repo/{{ name }}",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "build": "tsc",
+    "clean": "git clean -xdf .cache .turbo dist node_modules",
+    "dev": "tsc",
+    "biome:check": "biome check .",
+    "biome:fix": "biome check --fix .",
+    "typecheck": "tsc --noEmit --emitDeclarationOnly false"
+  },
+  "devDependencies": {
+    "@repo/biome-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "@biomejs/biome": "catalog:",
+    "typescript": "catalog:"
+  },
+  "dependencies": {
+  }
+}
