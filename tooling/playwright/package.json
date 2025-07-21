@@ -1,0 +1,22 @@
+{
+  "name": "@tooling/playwright-config",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "exports": {
+    ".": "./playwright.config.ts"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "biome:check": "biome check .",
+    "biome:fix": "biome check --fix ."
+  },
+  "devDependencies": {
+    "@biomejs/biome": "catalog:",
+    "@playwright/test": "catalog:",
+    "@tooling/biome-config": "workspace:*",
+    "@tooling/typescript-config": "workspace:*",
+    "@types/node": "catalog:",
+    "typescript": "catalog:"
+  }
+}
