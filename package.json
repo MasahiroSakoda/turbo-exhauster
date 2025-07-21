@@ -12,8 +12,8 @@
     "biome:fix": "biome check --fix ."
   },
   "devDependencies": {
-    "@repo/biome-config": "workspace:*",
     "@biomejs/biome": "catalog:",
+    "@tooling/biome-config": "workspace:*",
     "@turbo/gen": "catalog:",
     "turbo": "catalog:",
     "typescript": "catalog:"

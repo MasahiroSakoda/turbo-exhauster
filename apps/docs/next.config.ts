@@ -1,4 +1,4 @@
-import { config, withAnalyzer } from "@repo/next-config";
+import { config, withAnalyzer } from "@tooling/next-config";
 import type { NextConfig } from "next";
 import { env } from "./env";
 
