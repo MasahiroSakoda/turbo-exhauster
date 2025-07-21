@@ -9,7 +9,9 @@
     "start": "next start",
     "lint": "next lint --max-warnings 0",
     "check-types": "tsc --noEmit",
-    "test": ""
+    "test": "",
+    "biome:check": "biome check .",
+    "biome:fix": "biome check --fix ."
   },
   "dependencies": {
     "@repo/ui": "workspace:*",
