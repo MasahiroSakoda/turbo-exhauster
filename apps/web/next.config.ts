@@ -5,7 +5,7 @@ import { env } from "./env";
 let nextConfig: NextConfig = { ...config };
 
 if (env?.ANALYZE === "true") {
-	nextConfig = withAnalyzer(nextConfig);
+  nextConfig = withAnalyzer(nextConfig);
 }
 
 export default nextConfig;
