@@ -281,6 +281,15 @@ importers:
 
   tooling/jest:
     devDependencies:
+      '@biomejs/biome':
+        specifier: 'catalog:'
+        version: 2.1.2
+      '@repo/biome-config':
+        specifier: workspace:*
+        version: link:../biome
+      '@repo/typescript-config':
+        specifier: workspace:*
+        version: link:../typescript
       '@testing-library/jest-dom':
         specifier: 'catalog:'
         version: 6.6.3
