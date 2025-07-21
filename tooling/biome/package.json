@@ -1,0 +1,15 @@
+{
+  "name": "@repo/biome-config",
+  "version": "0.1.0",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "biome:check": "biome check .",
+    "biome:fix": "biome check --fix ."
+  },
+  "exports": {
+    "./biome": "./biome.json"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "catalog:"
+  }
+}
