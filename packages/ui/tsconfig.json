@@ -3,9 +3,7 @@
   "compilerOptions": {
     "outDir": "dist",
     "paths": {
-      "@/*": ["./*"],
-      "@repo/*": ["../../packages/*"],
-      "@tooling/*": ["../../tooling/*"]
+      "@/*": ["./*"]
     }
   },
   "include": ["src"],

@@ -5,9 +5,7 @@
       { "name": "next" }
     ],
     "paths": {
-      "@/*": ["./*"],
-      "@repo/*": ["../../packages/*"],
-      "@tooling/*": ["../../tooling/*"]
+      "@/*": ["./*"]
     }
   },
   "include": ["**/*.ts", "**/*.tsx", "next-env.d.ts", "next.config.js", ".next/types/**/*.ts"],
