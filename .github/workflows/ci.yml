@@ -1,0 +1,56 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches:
+      - main
+    types:
+      - opened
+
+jobs:
+  ci:
+    strategy:
+      matrix:
+        os:
+        - ubuntu-latest
+    runs-on: ${{ matrix.os }}
+    continue-on-error: true
+    timeout-minutes: 30
+    # To use Remote Caching, uncomment the next lines and follow the steps below.
+    # env:
+    #   TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
+    #   TURBO_TEAM: ${{ vars.TURBO_TEAM }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v3
+        with:
+          version: 8
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v4
+        with:
+          vesion: 20
+          cache: "pnpm"
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Create .env.local
+        run: |
+          touch apps/docs/.env.local
+          touch apps/web/.env.local
+          echo "NEXT_PUBLIC_APP_URL=http://localhost:3000" >> apps/docs/.env.local
+          echo "NEXT_PUBLIC_WEB_URL=http://localhost:3000" >> apps/docs/.env.local
+          echo "NEXT_PUBLIC_APP_URL=http://localhost:3001" >> apps/web/.env.local
+          echo "NEXT_PUBLIC_WEB_URL=http://localhost:3001" >> apps/web/.env.local
+
+      - name: Build
+        run: pnpm build
+
+      - name: Test
+        run: pnpm test

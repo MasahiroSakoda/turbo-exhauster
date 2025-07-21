@@ -1,0 +1,62 @@
+"CI/CD 🔁":
+  - changed-files:
+    - any-glob-to-any-file:
+      - ".github/workflows/**"
+      - ".github/ISSUE_TEMPLATE/*.yml"
+      - ".github/labeler.yml"
+
+"Deps 📦️":
+  - changed-files:
+    - any-glob-to-any-file:
+      - ".github/renovate.json5"
+      - ".github/dependabot.yml"
+      - "pnpm-workspace.yaml"
+
+"Config 🛠️":
+  - changed-files:
+    - any-glob-to-any-file:
+      - "package.json"
+      - "tsconfig.json"
+      - "*-config/*.json"
+      - "turbo.json"
+      - "biome.json"
+      - "next.config.*"
+      - "postcss.config.*"
+      - "components.json"
+
+"Testing ✅":
+  - changed-files:
+    - any-glob-to-any-file:
+      - "**/test/**"
+      - "**/tests/**"
+      - "*.test.ts"
+      - "*.test.tsx"
+      - "*.spec.ts"
+      - "*.spec.tsx"
+
+"Docs 📚":
+  - changed-files:
+    - any-glob-to-any-file:
+      - "**/*.md"
+      - "docs/**/*"
+
+"Bug 🐛":
+  - head-branch:
+    - "^fix/.*"
+    - "^bugfix/.*"
+    - "^hotfix/.*"
+
+"Feature ✨":
+  - head-branch:
+    - "^feat/.*"
+    - "^feature/.*"
+
+"Chore 🏠":
+  - head-branch:
+    - "^chore/.*"
+    - "^maintenance/.*"
+
+"Refactor ♻️":
+  - head-branch:
+    - "^refactor/.*"
+    - "^cleanup/.*"
