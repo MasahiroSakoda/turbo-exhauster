@@ -8,8 +8,8 @@
     "check-types": "turbo run check-types",
     "test": "turbo run test",
     "test:watch": "turbo run test:watch",
-    "biome:check": "biome check .",
-    "biome:fix": "biome check --fix ."
+    "biome:check": "turbo run biome:check",
+    "biome:fix": "turbo run biome:fix"
   },
   "devDependencies": {
     "@biomejs/biome": "catalog:",
