@@ -9,5 +9,11 @@
       "!**/public",
       "!**/.next"
     ]
+  },
+  "linter": {
+    "domains": {
+      "next": "recommended",
+      "react": "recommended"
+    }
   }
 }
