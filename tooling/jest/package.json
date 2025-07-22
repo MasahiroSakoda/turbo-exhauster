@@ -4,7 +4,7 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "test": "jest",
+    "clean": "git clean -xdf .cache .turbo dist node_modules",
     "biome:check": "biome check .",
     "biome:fix": "biome check --fix ."
   },
