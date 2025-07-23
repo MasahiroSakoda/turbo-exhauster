@@ -19,19 +19,25 @@ indent_size  = 2
 
 # HTML & CSS
 [*.{html,css,scss}]
-indent_style = space
+indent_style = tab
 indent_size  = 2
-tab_width    = 2
+max_line_length = 80
 
 # JavaScript / Typescript
 [*.{js,jsx,ts,tsx}]
-indent_style = space
+indent_style = tab
 indent_size  = 2
+max_line_length = 80
 
 # JSON & YAML
 [*.{json,y{a,}ml}]
+indent_style = tab
 indent_size  = 2
+max_line_length = 80
+
+[*.{y{a,}ml}]
 indent_style = space
+indent_size  = 2
 
 # TOML
 [*.{toml}]
