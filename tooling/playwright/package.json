@@ -1,22 +1,22 @@
 {
-  "name": "@tooling/playwright-config",
-  "version": "0.1.0",
-  "type": "module",
-  "private": true,
-  "exports": {
-    ".": "./playwright.config.ts"
-  },
-  "scripts": {
-    "clean": "git clean -xdf .cache .turbo dist node_modules",
-    "biome:check": "biome check .",
-    "biome:fix": "biome check --fix ."
-  },
-  "devDependencies": {
-    "@biomejs/biome": "catalog:",
-    "@playwright/test": "catalog:",
-    "@tooling/biome-config": "workspace:*",
-    "@tooling/typescript-config": "workspace:*",
-    "@types/node": "catalog:",
-    "typescript": "catalog:"
-  }
+	"name": "@tooling/playwright-config",
+	"version": "0.1.0",
+	"type": "module",
+	"private": true,
+	"exports": {
+		".": "./playwright.config.ts"
+	},
+	"scripts": {
+		"clean": "git clean -xdf .cache .turbo dist node_modules",
+		"biome:check": "biome check .",
+		"biome:fix": "biome check --fix ."
+	},
+	"devDependencies": {
+		"@biomejs/biome": "catalog:",
+		"@playwright/test": "catalog:",
+		"@tooling/biome-config": "workspace:*",
+		"@tooling/typescript-config": "workspace:*",
+		"@types/node": "catalog:",
+		"typescript": "catalog:"
+	}
 }
