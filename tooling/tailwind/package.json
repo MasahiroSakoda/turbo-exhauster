@@ -1,0 +1,19 @@
+{
+  "name": "@tooling/tailwind-config",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "clean": "git clean -xdf .cache .turbo dist node_modules",
+    "biome:check": "biome check .",
+    "biome:fix": "biome check --fix ."
+  },
+  "exports": {
+    ".": "./shared-styles.css"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@tailwindcss/postcss": "catalog:",
+    "tailwindcss": "catalog:"
+  }
+}

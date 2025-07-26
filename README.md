@@ -7,7 +7,7 @@ This Turborepo starter is maintained by the Turborepo core team.
 Run the following command:
 
 ```sh
-npx create-turbo@latest
+pnpx dlx create-turbo@latest
 ```
 
 ## What's inside?
@@ -19,8 +19,12 @@ This Turborepo includes the following packages/apps:
 - `docs`: a [Next.js](https://nextjs.org/) app
 - `web`: another [Next.js](https://nextjs.org/) app
 - `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
+- `@tooling/biome-config`: Shared `biome` configurations
+- `@tooling/next-config`: Shared `nextjs` configurations
+- `@tooling/tailwind-config`: Shared `tailwindcss` configurations
+- `@tooling/jest-config`: Shared `jest` configurations
+- `@tooling/playwright-config`: Shared `playwright` configurations
+- `@tooling/typescript-config`: `tsconfig.json`s used throughout the monorepo
 
 Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
 
@@ -29,8 +33,10 @@ Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
 This Turborepo has some additional tools already setup for you:
 
 - [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
+- [Biome](https://biomejs.dev) for code linting & formatting
+- [Tailwind CSS](https://tailwindcss.com/) for CSS framework
+- [Jest](https://jestjs.io) for Unit tests
+- [Playwright](https://playwright.dev/) for end-to-end tests
 
 ### Build
 
@@ -43,8 +49,6 @@ cd my-turborepo
 turbo build
 
 # Without [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation), use your package manager
-npx turbo build
-yarn dlx turbo build
 pnpm exec turbo build
 ```
 
@@ -55,8 +59,6 @@ You can build a specific package by using a [filter](https://turborepo.com/docs/
 turbo build --filter=docs
 
 # Without [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation), use your package manager
-npx turbo build --filter=docs
-yarn exec turbo build --filter=docs
 pnpm exec turbo build --filter=docs
 ```
 
@@ -71,8 +73,6 @@ cd my-turborepo
 turbo dev
 
 # Without [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation), use your package manager
-npx turbo dev
-yarn exec turbo dev
 pnpm exec turbo dev
 ```
 
@@ -83,8 +83,6 @@ You can develop a specific package by using a [filter](https://turborepo.com/doc
 turbo dev --filter=web
 
 # Without [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation), use your package manager
-npx turbo dev --filter=web
-yarn exec turbo dev --filter=web
 pnpm exec turbo dev --filter=web
 ```
 
@@ -104,8 +102,6 @@ cd my-turborepo
 turbo login
 
 # Without [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation), use your package manager
-npx turbo login
-yarn exec turbo login
 pnpm exec turbo login
 ```
 
@@ -118,8 +114,6 @@ Next, you can link your Turborepo to your Remote Cache by running the following 
 turbo link
 
 # Without [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation), use your package manager
-npx turbo link
-yarn exec turbo link
 pnpm exec turbo link
 ```
 

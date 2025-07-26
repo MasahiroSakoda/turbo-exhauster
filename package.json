@@ -5,13 +5,16 @@
     "build": "turbo run build",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "check-types": "turbo run check-types",
-    "test": "turbo run test"
+    "test": "turbo run test",
+    "test:watch": "turbo run test:watch",
+    "biome:check": "turbo run biome:check",
+    "biome:fix": "turbo run biome:fix"
   },
   "devDependencies": {
+    "@biomejs/biome": "catalog:",
+    "@tooling/biome-config": "workspace:*",
     "@turbo/gen": "catalog:",
-    "prettier": "catalog:",
     "turbo": "catalog:",
     "typescript": "catalog:"
   },
